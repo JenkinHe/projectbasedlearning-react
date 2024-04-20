@@ -16,6 +16,14 @@ function App() {
         <input type="text" value={password} className='outline-none w-full py-1 px-3' placeholder='Password' readOnly/>
         <button className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>Copy</button>
       </div>
+      <div className='flex text-sm gap-x-2'>
+        <div className='flex items-center gap-x-1'>
+          <input type='range' min={6} max={100} value={length} className='cursor-pointer' onChange={(e)=>setLength(e.target.value)} name='' id=''/>
+          <label htmlFor='length'>Length:{length}</label>
+
+        </div>
+
+      </div>
     </div>
   )
 }
