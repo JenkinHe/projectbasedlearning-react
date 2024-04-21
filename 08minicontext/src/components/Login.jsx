@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
 
 export default function Login() {
 
@@ -19,7 +19,7 @@ export default function Login() {
         type='text'
         value={username}
         onChange={(e)=>setUsername(e.target.value)}
-        placeholder='Useranme'
+        placeholder='Username'
         />
         {' '}
         <input
