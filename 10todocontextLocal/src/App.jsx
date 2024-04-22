@@ -16,6 +16,13 @@ function App() {
     setTodos((prev)=>prev.map((prevTodo)=>(prevTodo.id===todo.id?todo:prevTodo)))
   }
 
+  function deleteTodo(id){
+    setTodos((prev)=>prev.filter((todo)=>todo.id!==id))
+  }
+
+  function toggleComplete(id){
+    setTodos((prev)=> prev.map((prevTodo)=>prevTodo.id===id?{...prevTodo,completed:!prevTodo.completed}:{prevTodo}))
+  }
   
 
 
