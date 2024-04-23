@@ -1,3 +1,3 @@
 # projectbasedlearning-react
 
-////// solid  hour mark 8:00 min
+////// solid 10 hour mark 18:00 min
