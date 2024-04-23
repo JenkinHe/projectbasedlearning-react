@@ -25,7 +25,13 @@ export class AuthService{
             throw error
         }
     }
-    async login(){}
+    async login({email,password}){
+        try{
+            return await this.account.createEmailSession(email,password)
+        }catch(error){
+            throw error
+        }
+    }
     async getCurrentUser(){}
     async logout(){}
 
