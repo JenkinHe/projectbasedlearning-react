@@ -32,7 +32,16 @@ export class AuthService{
             throw error
         }
     }
-    async getCurrentUser(){}
+    async getCurrentUser(){
+        try{
+            return await this.account.get()
+
+        }catch(error){
+            console.log("Appwrite Sercie ::getCurrentUser()::",error);
+
+        }
+        return null;
+    }
     async logout(){}
 
 
