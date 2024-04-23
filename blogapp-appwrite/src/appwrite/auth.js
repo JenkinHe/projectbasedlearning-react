@@ -55,11 +55,6 @@ export class AuthService{
 
 }
 
+const authService = new AuthService();
 
-
-
-const client = new Client()
-    .setEndpoint('https://cloud.appwrite.io/v1') // Your API Endpoint
-    .setProject('<PROJECT_ID>');               // Your project ID
-
-const account = new Account(client);
+export default authService;
