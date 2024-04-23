@@ -46,6 +46,32 @@ export class Service{
             return false;
         }
     }
+
+    async updatePost(slug,{title,content,featuredImage,status}){
+        try {
+            return await this.databases.updateDocument(conf.appwriteDatabaseId,conf.appwriteCollectionId, slug,{
+                title,content,featuredImage,status
+                
+            })
+            
+        } catch (error) {
+            console.log('Appwrite service ::updatePost()::',error);
+            return false;
+            
+        }
+    }
+
+    async deletePost(slug){
+        try {
+            await this.databases.deleteDocument(conf.appwriteDatabaseId,conf.appwriteCollectionId, slug)
+            return true;
+            
+        } catch (error) {
+            console.log('Appwrite service ::deletePost()::',error);
+            return false;
+            
+        }
+    }
 }
 
 
